@@ -1,0 +1,86 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.education {
+  @include m.section-spacing;
+  border-top: 1px solid v.$line;
+}
+
+.inner {
+  @include m.container;
+}
+
+.kicker {
+  @include m.mono-label;
+  margin-bottom: v.$space-4;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: v.$space-3;
+  padding: v.$space-4 0;
+  border-top: 1px solid v.$line;
+}
+
+.mark {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid v.$line-strong;
+  border-radius: v.$radius;
+  color: v.$paper-dim;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: v.$space-2;
+
+  h3 {
+    font-size: v.$fs-lg;
+    font-weight: 600;
+  }
+}
+
+.period {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  color: v.$signal;
+  white-space: nowrap;
+}
+
+.degree {
+  margin-top: 0.3rem;
+  color: v.$paper-dim;
+  font-size: v.$fs-sm;
+}
+
+.description {
+  margin-top: v.$space-2;
+  max-width: 62ch;
+  color: v.$paper-dim;
+  font-size: v.$fs-sm;
+  line-height: 1.6;
+}
+
+.tags {
+  margin-top: v.$space-2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    font-family: v.$font-mono;
+    font-size: v.$fs-xs;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid v.$line-strong;
+    border-radius: v.$radius;
+    color: v.$paper-dim;
+  }
+}
