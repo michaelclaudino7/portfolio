@@ -1,0 +1,127 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+  @media (max-width: 390px) {
+    min-height: calc(80vh - 72px);
+  }
+}
+
+.frameLine {
+  position: absolute;
+  left: v.$gutter;
+  right: v.$gutter;
+  height: 1px;
+  background: v.$line-strong;
+}
+.frameTop {
+  top: 56px;
+}
+.frameBottom {
+  bottom: 56px;
+}
+
+.inner {
+  @include m.container;
+  position: relative;
+  z-index: 1;
+}
+
+.kicker {
+  @include m.mono-label;
+  margin-bottom: v.$space-3;
+}
+
+.nameMask {
+  overflow: hidden;
+  line-height: 1.02;
+
+  span {
+    display: block;
+    font-size: clamp(2.75rem, 8vw, v.$fs-3xl);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: v.$paper;
+  }
+}
+
+.role {
+  margin-top: v.$space-3;
+  font-family: v.$font-mono;
+  font-size: v.$fs-md;
+  color: v.$signal;
+}
+
+.pitch {
+  margin-top: v.$space-2;
+  max-width: 34ch;
+  font-size: v.$fs-md;
+  color: v.$paper-dim;
+  line-height: 1.5;
+}
+
+.actions {
+  margin-top: v.$space-4;
+  display: flex;
+  gap: v.$space-2;
+  flex-wrap: wrap;
+}
+
+.primaryAction {
+  font-family: v.$font-mono;
+  font-size: v.$fs-sm;
+  background: v.$signal;
+  color: v.$ink-900;
+  padding: 0.8rem 1.4rem;
+  border-radius: v.$radius;
+  font-weight: 500;
+  transition: transform 0.2s v.$ease, box-shadow 0.2s v.$ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 163, 61, 0.25);
+  }
+}
+
+.secondaryAction {
+  font-family: v.$font-mono;
+  font-size: v.$fs-sm;
+  border: 1px solid v.$line-strong;
+  padding: 0.8rem 1.4rem;
+  border-radius: v.$radius;
+  transition: border-color 0.2s v.$ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: v.$signal;
+  }
+}
+
+.coord {
+  position: absolute;
+  bottom: 24px;
+  @include m.mono-label;
+  z-index: 1;
+}
+.coordLeft {
+  left: v.$gutter;
+}
+.coordRight {
+  right: v.$gutter;
+}
+
+@media (max-width: 640px) {
+  .frameTop,
+  .frameBottom,
+  .coord {
+    display: none;
+  }
+}
