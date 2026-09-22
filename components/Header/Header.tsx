@@ -13,7 +13,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner}>
         <a href="#topo" className={styles.mark}>
-          MC<span>.</span>
+          MR<span>.</span>
         </a>
         <nav className={styles.nav} aria-label="Navegação principal">
           {navItems.map((item) => (
