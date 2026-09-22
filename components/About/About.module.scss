@@ -1,0 +1,58 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.about {
+  @include m.section-spacing;
+  border-top: 1px solid v.$line;
+}
+
+.inner {
+  @include m.container;
+}
+
+.kicker {
+  @include m.mono-label;
+  margin-bottom: v.$space-4;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: v.$space-6;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    gap: v.$space-4;
+  }
+}
+
+.summary {
+  font-size: v.$fs-lg;
+  line-height: 1.55;
+  color: v.$paper;
+  max-width: 62ch;
+  font-weight: 400;
+}
+
+.specs {
+  border-top: 1px solid v.$line-strong;
+  align-self: start;
+}
+
+.specRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-block: v.$space-2;
+  border-bottom: 1px solid v.$line;
+
+  dt {
+    @include m.mono-label;
+  }
+
+  dd {
+    margin: 0;
+    font-size: v.$fs-sm;
+    color: v.$paper;
+  }
+}
