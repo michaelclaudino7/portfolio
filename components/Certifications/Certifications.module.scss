@@ -1,0 +1,114 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.certs {
+  @include m.section-spacing;
+  border-top: 1px solid v.$line;
+}
+
+.inner {
+  @include m.container;
+}
+
+.kicker {
+  @include m.mono-label;
+  margin-bottom: v.$space-4;
+}
+
+// Grid explícito por breakpoint em vez de auto-fill: com 5 itens,
+// auto-fill podia deixar uma célula "fantasma" vazia na última linha
+// (a caixa cinza). Colunas fixas + itens em flex evitam esse buraco
+// em qualquer contagem de itens.
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-2;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item {
+  background: v.$ink-800;
+  border: 1px solid v.$line;
+  border-radius: v.$radius;
+  padding: v.$space-3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: v.$space-3;
+  min-height: 168px;
+  transition: border-color 0.2s v.$ease;
+
+  &:hover,
+  &:focus-within {
+    border-color: v.$line-strong;
+  }
+}
+
+.itemTop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.itemHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: v.$space-2;
+
+  h3 {
+    font-size: v.$fs-sm;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+}
+
+.issued {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  color: v.$signal;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.issuer {
+  font-size: v.$fs-xs;
+  color: v.$paper-dim;
+}
+
+.itemBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  li {
+    font-family: v.$font-mono;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid v.$line-strong;
+    border-radius: v.$radius;
+    color: v.$paper-dim;
+  }
+}
+
+.credential {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  color: v.$paper-dim;
+  opacity: 0.6;
+  padding-top: 0.6rem;
+  border-top: 1px solid v.$line;
+}
