@@ -1,0 +1,58 @@
+@use "../../styles/variables" as v;
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(v.$line 1px, transparent 1px),
+    linear-gradient(90deg, v.$line 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: linear-gradient(to bottom, black, black, transparent);
+  pointer-events: none;
+}
+
+.crosshair {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: v.$line-strong;
+  }
+
+  &::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    transform: translateX(-50%);
+  }
+
+  &[data-pos="tl"] {
+    top: 24px;
+    left: 24px;
+  }
+  &[data-pos="tr"] {
+    top: 24px;
+    right: 24px;
+  }
+  &[data-pos="bl"] {
+    bottom: 24px;
+    left: 24px;
+  }
+  &[data-pos="br"] {
+    bottom: 24px;
+    right: 24px;
+  }
+}
