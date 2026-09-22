@@ -1,0 +1,59 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.contact {
+  @include m.section-spacing;
+  border-top: 1px solid v.$line;
+}
+
+.inner {
+  @include m.container;
+}
+
+.kicker {
+  @include m.mono-label;
+  margin-bottom: v.$space-3;
+}
+
+.heading {
+  font-size: clamp(1.25rem, 5vw, v.$fs-2xl);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  max-width: 19ch;
+}
+
+.links {
+  margin-top: v.$space-4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-3;
+  align-items: center;
+  font-family: v.$font-mono;
+  font-size: v.$fs-sm;
+
+  a:not(.primary) {
+    color: v.$paper-dim;
+    transition: color 0.2s v.$ease;
+
+    &:hover,
+    &:focus-visible {
+      color: v.$paper;
+    }
+  }
+}
+
+.primary {
+  background: v.$signal;
+  color: v.$ink-900;
+  padding: 0.8rem 1.4rem;
+  border-radius: v.$radius;
+  font-weight: 500;
+  transition: transform 0.2s v.$ease, box-shadow 0.2s v.$ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 163, 61, 0.25);
+  }
+}

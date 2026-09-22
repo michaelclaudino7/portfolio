@@ -1,0 +1,18 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.footer {
+  border-top: 1px solid v.$line;
+  padding-block: v.$space-3;
+}
+
+.inner {
+  @include m.container;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: v.$space-2;
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  color: v.$paper-dim;
+}
