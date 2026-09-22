@@ -1,0 +1,182 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.experience {
+  @include m.section-spacing;
+  border-top: 1px solid v.$line;
+}
+
+.inner {
+  @include m.container;
+}
+
+.kicker {
+  @include m.mono-label;
+  margin-bottom: v.$space-5;
+}
+
+.track {
+  position: relative;
+  padding-left: 28px;
+}
+
+.trackBase,
+.trackFill {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+}
+
+.trackBase {
+  background: v.$line-strong;
+}
+
+.trackFill {
+  background: v.$signal;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: v.$space-5;
+}
+
+.node {
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  left: -28px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: v.$ink-900;
+  border: 2px solid v.$paper-dim;
+}
+
+.dotCurrent {
+  border-color: v.$signal;
+  background: v.$signal;
+  box-shadow: 0 0 0 4px rgba(232, 163, 61, 0.18);
+}
+
+.card {
+  background: v.$ink-800;
+  border: 1px solid v.$line;
+  border-radius: v.$radius;
+  padding: v.$space-3 v.$space-4;
+}
+
+.cardHead {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: v.$space-2;
+  align-items: start;
+  padding-bottom: v.$space-2;
+  border-bottom: 1px solid v.$line;
+  margin-bottom: v.$space-3;
+
+  @media (max-width: 640px) {
+    grid-template-columns: auto 1fr;
+
+    > .period {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      gap: v.$space-2;
+    }
+  }
+
+  @media (max-width: 390px) {
+    > .period {
+      align-items: flex-start;
+      flex-direction: column;
+      padding-left: 50px;
+    }
+  }
+}
+
+.mark {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid v.$line-strong;
+  border-radius: v.$radius;
+  color: v.$paper-dim;
+}
+
+.roleTitle {
+  font-size: v.$fs-md;
+  font-weight: 600;
+
+  span {
+    font-weight: 400;
+    color: v.$paper-dim;
+  }
+}
+
+.meta {
+  @include m.mono-label;
+  margin-top: 0.2rem;
+}
+
+.period {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  color: v.$paper-dim;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.duration {
+  color: v.$signal;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: v.$space-3;
+
+  li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: v.$fs-sm;
+    color: v.$paper-dim;
+    line-height: 1.6;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 6px;
+      height: 1px;
+      background: v.$paper-dim;
+    }
+  }
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  li {
+    font-family: v.$font-mono;
+    font-size: v.$fs-xs;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid v.$line-strong;
+    border-radius: v.$radius;
+    color: v.$paper-dim;
+  }
+}
