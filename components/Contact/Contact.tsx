@@ -13,7 +13,12 @@ export default function Contact() {
         </h2>
 
         <div className={styles.links}>
-          <a href={profile.links.email} className={styles.primary}>
+          <a 
+            href={profile.links.email}
+            target="_blank"
+            rel="noreferrer"
+            className={styles.primary}
+          >
             Enviar e-mail
           </a>
           <a href={profile.links.linkedin} target="_blank" rel="noreferrer">

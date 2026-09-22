@@ -10,7 +10,8 @@ export const profile = {
   links: {
     linkedin: "https://www.linkedin.com/in/michael-claudino7/",
     github: "https://github.com/michaelclaudino7",
-    email: "mailto:michaelclaudino7@gmail.com",
+    email:
+      "https://mail.google.com/mail/?view=cm&fs=1&to=michaelclaudino7@gmail.com&su=Contato%20via%20portf%C3%B3lio",
   },
 };
 
@@ -63,7 +64,7 @@ export const experiences: Experience[] = [
     companyMark: "IW",
     type: "Estágio",
     period: "Jul 2022 — Jul 2023",
-    duration: "1 ano e 1 mês",
+    duration: "1 ano",
     location: "Remoto",
     bullets: [
       "Desenvolvi APIs REST com C#, .NET e Entity Framework para suportar funcionalidades-chave do produto.",
