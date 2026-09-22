@@ -1,0 +1,66 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.skills {
+  @include m.section-spacing;
+  border-top: 1px solid v.$line;
+}
+
+.inner {
+  @include m.container;
+}
+
+.kicker {
+  @include m.mono-label;
+  margin-bottom: v.$space-4;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$space-2;
+
+  @media (min-width: 560px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1180px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.group {
+  background: v.$ink-800;
+  border: 1px solid v.$line;
+  border-radius: v.$radius;
+  padding: v.$space-3;
+  transition: border-color 0.2s v.$ease;
+
+  &:hover,
+  &:focus-within {
+    border-color: v.$line-strong;
+  }
+
+  h3 {
+    font-family: v.$font-mono;
+    font-size: v.$fs-xs;
+    color: v.$signal;
+    margin-bottom: v.$space-2;
+    text-transform: lowercase;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  li {
+    font-size: v.$fs-sm;
+    color: v.$paper;
+  }
+}
