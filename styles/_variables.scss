@@ -1,0 +1,52 @@
+// ============================================================
+// DESIGN TOKENS — "Blueprint" system
+// Conceito: planta técnica de engenharia. O portfólio de um
+// dev full stack que projeta e conecta sistemas é desenhado
+// como um desenho de arquitetura: linhas finas, grid de
+// construção, anotações em mono, nós conectados.
+// ============================================================
+
+// --- Cor ---
+$ink-900: #081226;   // fundo principal (azul-tinta profundo, não preto puro)
+$ink-800: #0d1c3a;   // fundo secundário / cards
+$ink-700: #16294f;   // bordas e linhas de grid
+$paper: #f2eee2;     // "papel" — texto principal e linework, cream quente
+$paper-dim: #aab6cf; // texto secundário sobre fundo escuro
+$signal: #e8a33d;    // amber — único acento de sinal (links ativos, CTA, nó atual)
+$signal-dim: #8a6a34;
+
+$line: rgba(242, 238, 226, 0.14); // linhas de grid sutis
+$line-strong: rgba(242, 238, 226, 0.28);
+
+// --- Tipografia ---
+$font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+$font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+$font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+
+// --- Escala tipográfica (razão ~1.25) ---
+$fs-xs: 0.75rem;
+$fs-sm: 0.875rem;
+$fs-base: 1rem;
+$fs-md: 1.25rem;
+$fs-lg: 1.25rem;
+$fs-xl: 2.5rem;
+$fs-2xl: 3.5rem;
+$fs-3xl: 5rem;
+
+// --- Espaçamento ---
+$space-1: 0.5rem;
+$space-2: 1rem;
+$space-3: 1.5rem;
+$space-4: 2.5rem;
+$space-5: 4rem;
+$space-6: 6rem;
+$space-7: 9rem;
+
+// --- Layout ---
+$max-width: 1180px;
+$content-width: 720px;
+$gutter: clamp(1.5rem, 5vw, 4rem);
+
+// --- Outros ---
+$radius: 3px; // blueprints não têm cantos arredondados generosos
+$ease: cubic-bezier(0.65, 0, 0.35, 1);

@@ -1,0 +1,36 @@
+@use "variables" as v;
+
+@mixin container {
+  width: 100%;
+  max-width: v.$max-width;
+  margin-inline: auto;
+  padding-inline: v.$gutter;
+}
+
+@mixin mono-label {
+  font-family: v.$font-mono;
+  font-size: v.$fs-xs;
+  letter-spacing: 0.02em;
+  color: v.$paper-dim;
+}
+
+@mixin section-spacing {
+  padding-block: v.$space-6;
+
+  @media (max-width: 640px) {
+    padding-block: v.$space-5;
+  }
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid v.$signal;
+    outline-offset: 3px;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
