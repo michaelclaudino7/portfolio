@@ -46,6 +46,18 @@ export default function Experience() {
               start: "top 82%",
             },
           });
+
+          // A bolinha do nó acende (fica laranja) no mesmo instante em
+          // que o cartão entra em cena — dá a sensação de que a linha
+          // "acendeu" aquele ponto ao chegar nele.
+          const dot = node.querySelector(`.${styles.dot}`);
+          if (dot) {
+            ScrollTrigger.create({
+              trigger: node,
+              start: "top 82%",
+              toggleClass: { targets: dot, className: styles.dotFilled },
+            });
+          }
         });
       }, sectionRef);
 
@@ -67,12 +79,7 @@ export default function Experience() {
           <ol className={styles.list}>
             {experiences.map((exp) => (
               <li key={exp.company} className={styles.node}>
-                <span
-                  className={`${styles.dot} ${
-                    exp.current ? styles.dotCurrent : ""
-                  }`}
-                  aria-hidden="true"
-                />
+                <span className={styles.dot} aria-hidden="true" />
 
                 <div className={styles.card}>
                   <header className={styles.cardHead}>

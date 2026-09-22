@@ -24,7 +24,9 @@
 .trackFill {
   position: absolute;
   left: 4px;
-  top: 6px;
+  // 13px = centro exato da bolinha (top: 8px + metade dos 10px de altura),
+  // pra linha não sobrar acima do primeiro nó.
+  top: 13px;
   bottom: 6px;
   width: 2px;
 }
@@ -56,9 +58,13 @@
   border-radius: 50%;
   background: v.$ink-900;
   border: 2px solid v.$paper-dim;
+  transition: background 0.3s v.$ease, border-color 0.3s v.$ease,
+    box-shadow 0.3s v.$ease;
 }
 
-.dotCurrent {
+// Acende via JS (ScrollTrigger) quando a linha alcança o nó, em vez de
+// ficar fixa por um campo "current" — some se o usuário rolar de volta.
+.dotFilled {
   border-color: v.$signal;
   background: v.$signal;
   box-shadow: 0 0 0 4px rgba(232, 163, 61, 0.18);
