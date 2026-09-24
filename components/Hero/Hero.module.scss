@@ -75,6 +75,9 @@
 }
 
 .primaryAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: v.$font-mono;
   font-size: v.$fs-sm;
   background: v.$signal;

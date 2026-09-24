@@ -10,6 +10,7 @@ export const profile = {
   links: {
     linkedin: "https://www.linkedin.com/in/michael-claudino7/",
     github: "https://github.com/michaelclaudino7",
+    resume: "/michael-rodrigues-curriculo.pdf",
     email:
       "https://mail.google.com/mail/?view=cm&fs=1&to=michaelclaudino7@gmail.com&su=Contato%20via%20portf%C3%B3lio",
   },

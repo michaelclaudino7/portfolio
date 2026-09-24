@@ -89,6 +89,28 @@ export default function Hero() {
         <p className={styles.pitch}>{profile.pitch}</p>
 
         <div className={styles.actions}>
+          <a
+            href={profile.links.resume}
+            download
+            className={styles.primaryAction}
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3v12" />
+              <path d="M7 10l5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+            Baixar currículo
+          </a>
           <a href="#experiencia" className={styles.primaryAction}>
             Ver experiência
           </a>
