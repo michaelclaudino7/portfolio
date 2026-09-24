@@ -41,6 +41,18 @@
       color: v.$paper;
     }
   }
+
+  a {
+    border: 1px solid v.$line-strong;
+    padding: 0.8rem 1.4rem;
+    border-radius: v.$radius;
+    transition: border-color 0.2s v.$ease;
+
+    &:hover,
+    &:focus-visible {
+      border-color: v.$signal;
+    }
+  }
 }
 
 .primary {
