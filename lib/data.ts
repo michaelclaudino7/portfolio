@@ -130,6 +130,12 @@ export type Certification = {
 
 export const certifications: Certification[] = [
   {
+    name: "Microsoft Certified: Azure Fundamentals",
+    issuer: "Microsoft",
+    issued: "Sep 2026",
+    credentialId: "981C3458A836C548",
+  },
+  {
     name: "Academy Accreditation — AI Agent Fundamentals",
     issuer: "Databricks",
     issued: "Ago 2026",
