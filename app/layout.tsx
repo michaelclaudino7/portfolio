@@ -4,7 +4,7 @@ import "./globals.scss";
 export const metadata: Metadata = {
   title: "Michael Rodrigues — Desenvolvedor Full Stack",
   description:
-    "Portfólio de Michael Rodrigues, Desenvolvedor Full Stack especializado em React, Next.js, TypeScript, C# e .NET.",
+    "Portfólio de Michael Rodrigues, Desenvolvedor Full Stack especializado em React, Next.js, TypeScript, Node.js e Nest.js.",
 };
 
 export default function RootLayout({

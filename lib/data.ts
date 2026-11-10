@@ -4,13 +4,13 @@ export const profile = {
   pitch:
     "Construo interfaces escaláveis e APIs robustas — do componente React ao microsserviço em produção.",
   summary:
-    "Desenvolvedor Full Stack com experiência na construção de interfaces escaláveis e APIs robustas, atuando com React, Next.js, TypeScript, C#, .NET, Entity Framework, SQL Server, MongoDB, RabbitMQ, microsserviços, Docker, CI/CD e Azure. Ao longo da minha trajetória, construí uma base sólida em lógica, modelagem de dados e boas práticas de arquitetura, atuando tanto em frontend quanto em backend em projetos para clientes como Locaweb, RD Station, Unicred, Sicoob, Sankhya e a Assembleia Legislativa do Espírito Santo (ALES).",
+    "Desenvolvedor Full Stack com experiência na construção de interfaces escaláveis e REST APIs, atuando com React, Next.js, TypeScript, Node.js e Nest.js/Express, PostgreSQL, MongoDB, RabbitMQ, microsserviços, Docker, CI/CD e Azure. Ao longo da minha trajetória, construí uma base sólida em lógica, modelagem de dados e boas práticas de arquitetura, atuando tanto em frontend quanto em backend em projetos para clientes como Locaweb, RD Station, Unicred, Sicoob, Sankhya e a Assembleia Legislativa do Espírito Santo (ALES).",
   location: "São Paulo, SP",
   languages: "Inglês avançado",
   links: {
     linkedin: "https://www.linkedin.com/in/michael-claudino7/",
     github: "https://github.com/michaelclaudino7",
-    resume: "/michael-rodrigues-curriculo.pdf",
+    resume: "/michael-desenvolvedor.pdf",
     email:
       "https://mail.google.com/mail/?view=cm&fs=1&to=michaelclaudino7@gmail.com&su=Contato%20via%20portf%C3%B3lio",
   },
@@ -68,22 +68,20 @@ export const experiences: Experience[] = [
     duration: "1 ano",
     location: "Remoto",
     bullets: [
-      "Desenvolvi APIs REST com C#, .NET e Entity Framework para suportar funcionalidades-chave do produto.",
+      "Desenvolvi APIs REST com Node.js, Express para suportar funcionalidades-chave do produto.",
       "Construí interfaces web com React, Next.js e TypeScript, integrando frontend e backend de ponta a ponta.",
-      "Trabalhei com bancos de dados SQL Server e NoSQL (MongoDB), realizando consultas e manipulação de dados para regras de negócio.",
-      "Desenvolvi e mantive microsserviços com comunicação assíncrona via RabbitMQ, hospedados na Azure.",
+      "Desenvolvi uma automação em Python e Flask para extração de dados.",
+      "Trabalhei com bancos de dados SQL (PostgreSQL) e NoSQL (MongoDB), realizando consultas e manipulação de dados para regras de negócio.",
       "Diagnostiquei e corrigi problemas técnicos nas APIs, contribuindo para uma melhoria de até 20% em performance e estabilidade.",
       "Documentei APIs com Swagger, facilitando o consumo por outros times e a manutenção futura.",
       "Ajudei a integrar o chatbot Watson Assistant (IBM) no backend do Alesinha, assistente virtual pioneira no atendimento digital do setor público capixaba.",
     ],
     stack: [
-      "C#",
-      ".NET Framework",
-      "Entity Framework",
-      "SQL Server",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
       "MongoDB",
-      "RabbitMQ",
-      "Azure",
       "React",
       "TypeScript",
       "Swagger",
@@ -181,15 +179,15 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     label: "Backend",
-    items: ["C#", ".NET", "Entity Framework", "APIs RESTful", "Microsserviços"],
+    items: ["Node.js", "Nest.js", "Express", "APIs RESTful", "Microsserviços"],
   },
   {
     label: "Dados",
-    items: ["SQL Server", "PostgreSQL", "MongoDB", "Modelagem de Dados"],
+    items: ["PostgreSQL", "MongoDB", "Modelagem de Dados"],
   },
   {
     label: "Infraestrutura",
-    items: ["Docker", "CI/CD", "Azure", "RabbitMQ"],
+    items: ["Docker", "CI/CD", "Azure", "AWS", "RabbitMQ"],
   },
   {
     label: "Processo",
